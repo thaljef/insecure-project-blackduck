@@ -45,11 +45,11 @@ jobs:
         blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
 
       ### Uncomment below configuration to enable automatic fix pull request creation if vulnerabilities are reported
-      # blackduck_fixpr_enabled: true
-      # blackduck_fixpr_maxCount: 5
-      # blackduck_fixpr_filter_severities: 'CRITICAL,HIGH'
-      # blackduck_fixpr_useUpgradeGuidance: 'SHORT_TERM,LONG_TERM'
-      # github_token: ${{ secrets.GITHUB_TOKEN }} # Mandatory when blackduck_fixpr_enabled is set to 'true'
+      blackduck_fixpr_enabled: true
+      blackduck_fixpr_maxCount: 5
+      blackduck_fixpr_filter_severities: 'CRITICAL,HIGH'
+      blackduck_fixpr_useUpgradeGuidance: 'SHORT_TERM,LONG_TERM'
+      github_token: ${{ secrets.GITHUB_TOKEN }} # Mandatory when blackduck_fixpr_enabled is set to 'true'
 
       ### SARIF report generation and upload to GitHub Adavanced Security: Uncomment below to enable
       # blackduck_reports_sarif_create: true # Create Black Duck SARIF report and upload it as artifact
