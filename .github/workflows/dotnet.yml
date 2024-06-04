@@ -38,6 +38,6 @@ jobs:
         blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
         blackduck_scan_full: false  
         blackduck_prComment_enabled: true
-        blackduck_fixpr_enabled: true
-        
+        blackduck_fixpr_enabled: true        
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        
