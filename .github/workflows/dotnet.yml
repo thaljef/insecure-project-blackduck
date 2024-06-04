@@ -16,6 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
@@ -23,8 +24,10 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
+
     - name: Build
       run: dotnet build --no-restore
+
     - name: Black Duck PR Scan
       uses: synopsys-sig/synopsys-action@v1.9.0
       env:
@@ -35,4 +38,5 @@ jobs:
         blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
         blackduck_scan_full: false  
         blackduck_prComment_enabled: true
+        blackduck_fixpr_enabled: true
         github_token: ${{ secrets.GITHUB_TOKEN }} 
