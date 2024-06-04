@@ -49,7 +49,7 @@ jobs:
         blackduck_fixpr_enabled: true
         blackduck_fixpr_maxCount: 5
         blackduck_fixpr_filter_severities: 'CRITICAL,HIGH'
-        blackduck_fixpr_useUpgradeGuidance: 'SHORT_TERM,LONG_TERM'
+        #blackduck_fixpr_useUpgradeGuidance: 'SHORT_TERM,LONG_TERM'
         github_token: ${{ secrets.GITHUB_TOKEN }} # Mandatory when blackduck_fixpr_enabled is set to 'true'
 
         ### SARIF report generation and upload to GitHub Adavanced Security: Uncomment below to enable
