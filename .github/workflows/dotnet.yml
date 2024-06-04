@@ -8,6 +8,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -67,7 +68,7 @@ jobs:
       env:
         DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
         DETECT_PROJECT_VERSION_NAME: ${{ github.base_ref }}
-        DETECT_BLACKDUCK_RAPID_COMPARE_MODE: BOM_COMPARE_STRICT
+        DETECT_BLACKDUCK_RAPID_COMPARE_MODE: ALL
         DETECT_DETECTOR_SEARCH_CONTINUE: true
         DETECT_DETECTOR_SEARCH_DEPTH: 10
       with:
